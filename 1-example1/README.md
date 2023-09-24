@@ -17,3 +17,7 @@
 - e.g. `fa56244d0d4c   ffe5b0401d1f    "docker-entrypoint.s…"   19 seconds ago   Up 18 seconds   0.0.0.0:3000->3000/tcp, :::3000->3000/tcp  ...`
 - Then stop it
 - `docker stop fa56244d0d4c`
+
+### Restart container
+- `docker start fa56244d0d4c`, restart the container (in detached mode)
+- `docker ps`
