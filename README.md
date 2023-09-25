@@ -7,3 +7,5 @@
 - Images are read only, you can't write to them. Need to rebuild them for changes
 - Every instruction in an image creates a cacheable layer - layers help with image re-building and sharing
 - By default, if you run a Container without -d, you run in "attached mode"
+- Use copy files/folders from container to local folders for review logs
+- 
