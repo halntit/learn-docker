@@ -1,4 +1,4 @@
-## Example 02
+## Assignment 01
 
 ### Build and run image file
 - `docker build .`

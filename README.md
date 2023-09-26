@@ -8,4 +8,4 @@
 - Every instruction in an image creates a cacheable layer - layers help with image re-building and sharing
 - By default, if you run a Container without -d, you run in "attached mode"
 - Use copy files/folders from container to local folders for review logs
-- 
+- When start / run a container with the --rm option, anonymous volume will be removed automatically. Without that option, it will not removed even if remove its container
