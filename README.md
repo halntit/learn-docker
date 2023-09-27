@@ -9,3 +9,6 @@
 - By default, if you run a Container without -d, you run in "attached mode"
 - Use copy files/folders from container to local folders for review logs
 - When start / run a container with the --rm option, anonymous volume will be removed automatically. Without that option, it will not removed even if remove its container
+- Volumes: local files will overwrite container files, not the other way around (container never overwrite local files)
+- Volumes: `-v /path/to/folder:/path/to/mapped/folder` has volume name, while `-v /app/node_modules` is anonymous volume
+- Volumes: in Dockerfile this `VOLUME [ "app/node_modules" ]` is equivalent to anonymous volume in cli `-v /app/node_modules`
