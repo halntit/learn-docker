@@ -16,3 +16,7 @@
 
 ### Bind Mounts - Shortcuts
 - options: `-v $(pwd):/app`
+
+### ENV and ARG
+- `docker run ... --env-file ./env`
+- `docker run ... -e PORT=80`

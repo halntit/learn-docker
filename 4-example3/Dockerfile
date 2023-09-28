@@ -8,7 +8,12 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 80
+# should put here, after npm install
+ARG DEFAULT_PORT=80
+
+ENV PORT $DEFAULT_PORT
+
+EXPOSE $PORT
 
 # VOLUME [ "/app/node_modules" ]
 
