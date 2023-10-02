@@ -12,3 +12,5 @@
 - Volumes: local files will overwrite container files, not the other way around (container never overwrite local files)
 - Volumes: `-v /path/to/folder:/path/to/mapped/folder` has volume name, while `-v /app/node_modules` is anonymous volume
 - Volumes: in Dockerfile this `VOLUME [ "app/node_modules" ]` is equivalent to anonymous volume in cli `-v /app/node_modules`
+- Send requests from container to WWW just works (no need configs)
+- `host.docker.internal` is localhost / host machine used by docker
