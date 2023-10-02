@@ -4,4 +4,4 @@
 - `docker build -t fn .` (favourite nodes)
 
 ### Run
-- `docker run --name fav -d --rm -p 3000:3000 fn` 
+- `docker run --name fav -d --rm -p 3000:3000 fn`
