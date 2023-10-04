@@ -67,8 +67,9 @@ app.get('/people', async (req, res) => {
   }
 });
 
+//mongodb://<mongo container name>:27017/swfavorites...
 mongoose.connect(
-  'mongodb://172.18.0.1:27017/swfavorites',
+  'mongodb://mongo:27017/swfavorites',
   { useNewUrlParser: true },
   (err) => {
     if (err) {
