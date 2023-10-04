@@ -14,6 +14,7 @@
 - Volumes: in Dockerfile this `VOLUME [ "app/node_modules" ]` is equivalent to anonymous volume in cli `-v /app/node_modules`
 - Send requests from container to WWW just works (no need configs)
 - `host.docker.internal` is localhost / host machine used by docker
+  - `host.docker.internal` for Windows and MacOS, `localhost`(host mode)/`172.18.0.1`(bridge mode) for Linux
 - mongodb:
   - use docker: `docker pull mongodb/mongodb-community-server`
   - run docker: `docker run --name mongo --rm -p 27017:27017 mongodb/mongodb-community-server:latest`
