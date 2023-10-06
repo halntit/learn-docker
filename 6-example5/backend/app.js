@@ -84,10 +84,11 @@ app.delete('/goals/:id', async (req, res) => {
 });
 
 mongoose.connect(
-  'mongodb://localhost:27017/course-goals',
+  'mongodb://172.18.0.1:27017/course-goals',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    connectTimeoutMS: 4000,
   },
   (err) => {
     if (err) {
