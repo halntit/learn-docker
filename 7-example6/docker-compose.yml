@@ -1,0 +1,48 @@
+version: "3.8"
+services:
+
+  mongodb:
+    image: "mongo"
+    volumes:
+      - data:/data/db
+    # environment:
+    #   MONGO_INITDB_ROOT_USERNAME: root
+    #   MONGO_INITDB_ROOT_PASSWORD: 5ecrEt
+      # MONGO_INITDB_ROOT_USERNAME=root
+    env_file:
+      - ./env/mongodb.env
+    # ports: ["27017:27017"]
+
+  backend:
+    build: ./backend #short form
+    # build:
+    #   context: ./backend
+    #   dockerfile: Dockerfile
+    #   args:
+    #     - NODE_ENV=production
+    ports:
+      - "8000:8000"
+    volumes:
+      - logs:/app/logs
+      - ./backend:/app #relative path with docker-compose
+      - /app/node_modules #anonymous volume
+    env_file:
+      - ./env/backend.env
+    depends_on:
+      - mongodb # in multiple containers, some container depends on others; If no DB, it will fail
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/src:/app/src #relative path with docker-compose
+    stdin_open: true #-i
+    tty: true #-t
+    depends_on:
+      - backend
+
+# named volumes must be declared here
+volumes:
+  data:
+  logs:
