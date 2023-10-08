@@ -83,8 +83,11 @@ app.delete('/goals/:id', async (req, res) => {
   }
 });
 
+// 172.18.0.1 bridge
+// localhost
+// mongo: name of docker container
 mongoose.connect(
-  'mongodb://172.18.0.1:27017/course-goals',
+  'mongodb://mongo:27017/course-goals',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
