@@ -18,4 +18,6 @@
 - mongodb:
   - use docker: `docker pull mongodb/mongodb-community-server`
   - run docker: `docker run --name mongo --rm -p 27017:27017 mongodb/mongodb-community-server:latest`
+  - data stored: /data/db
+  - add creds: `docker run --name mongo --rm -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password -p 27017:27017 mongodb/mongodb-community-server:latest`
 - run `docker inspect <container id>` to view the container details, including IP addresses
