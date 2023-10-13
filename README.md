@@ -23,3 +23,5 @@
 - run `docker inspect <container id>` to view the container details, including IP addresses
 - docker compose:
   - named volumes must be declared here: `volumes:`
+- untilities:
+  - `docker exec ...`: allow to run command in running container
