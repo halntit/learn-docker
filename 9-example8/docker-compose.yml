@@ -13,7 +13,7 @@ services:
       context: ./dockerfiles
       dockerfile: php.dockerfile
     volumes:
-      - ./src/:/var/www/html:delegated # improve performance
+      - ./src:/var/www/html:delegated # improve performance
   mysql:
     image: mysql:5.7
     env_file:
@@ -23,6 +23,6 @@ services:
       context: ./dockerfiles
       dockerfile: composer.dockerfile
     volumes:
-      - ./src/:/var/www/html
+      - ./src:/var/www/html
   #artisan
   #npm
