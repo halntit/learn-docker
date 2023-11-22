@@ -15,5 +15,13 @@
   - `sudo systemctl enable docker`
   - `docker version`
 - Log out and back in EC2 instance
-- `docker run -d --rm -p 8000:80 halntit/aws-ec2`
+- `docker run -d --rm -p 80:80 halntit/aws-ec2`
 - EC2: open inbound for port 80, 8000 on EC2 instance
+
+### Update container on EC2
+- Update codes locally
+- Rebuild image, tag and push to Docker Hub
+- EC2:
+  - `docker stop <containerID>`
+  - `docker pull halntit/aws-ec2`
+  - `docker run -d --rm -p 80:80 halntit/aws-ec2`
