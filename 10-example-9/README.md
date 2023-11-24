@@ -25,3 +25,5 @@
   - `docker stop <containerID>`
   - `docker pull halntit/aws-ec2`
   - `docker run -d --rm -p 80:80 halntit/aws-ec2`
+
+### Managed service (AWS ECS)
