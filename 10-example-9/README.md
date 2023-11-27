@@ -28,3 +28,10 @@
 
 ### Managed service (AWS ECS)
 https://aws.amazon.com/getting-started/hands-on/deploy-docker-containers/
+
+### Update container on ECS
+- Update codes locally
+- Rebuild image, tag and push to Docker Hub
+- ECS:
+  - Create new revision for task
+  - Update service (with the same settings)
