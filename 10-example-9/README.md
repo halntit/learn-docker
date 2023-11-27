@@ -27,3 +27,4 @@
   - `docker run -d --rm -p 80:80 halntit/aws-ec2`
 
 ### Managed service (AWS ECS)
+https://aws.amazon.com/getting-started/hands-on/deploy-docker-containers/
