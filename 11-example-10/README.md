@@ -18,3 +18,6 @@
 
 ### ECS
 - services based on tasks -> create tasks first
+- Create task definition
+  - Add container for nodejs server
+  - Add container for mongodb
