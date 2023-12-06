@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/goals', async (req, res) => {
-  console.log('TRYING TO FETCH GOALS');
+  console.log('TRYING TO FETCH GOALS!');
   try {
     const goals = await Goal.find();
     res.status(200).json({
@@ -83,6 +83,7 @@ mongoose.connect(
   },
   (err) => {
     if (err) {
+      console.log(`CONNECT STRING: mongodb://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_URL}:27017/course-goals?authSource=admin`);
       console.error('FAILED TO CONNECT TO MONGODB');
       console.error(err);
     } else {
