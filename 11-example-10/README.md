@@ -21,3 +21,4 @@
 - Create task definition
   - Add container for nodejs server
   - Add container for mongodb
+  - (have issue on connecting from nodejs to mongodb)
