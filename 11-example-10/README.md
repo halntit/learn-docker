@@ -22,3 +22,6 @@
   - Add container for nodejs server
   - Add container for mongodb
   - (have issue on connecting from nodejs to mongodb)
+- Use EFS for storing data
+  - Mind the VPC
+  - Mind the mount point (should be the same with local machine)
