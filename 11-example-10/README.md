@@ -25,3 +25,15 @@
 - Use EFS for storing data
   - Mind the VPC
   - Mind the mount point (should be the same with local machine)
+- Architecture
+
+   |=======================================|
+   | AWS   |            AWS ECS            |
+   | LB    |-------------------------------|
+   |       |            ECS TASK           |
+   |       |-------------------------------|
+   |       |   NODE APP    |    MongoDB    |
+   |       |               |    -------    |
+   |       |               |    | Vol |    |
+   |       |               |    | EFS |    |
+   |=======================================|  
