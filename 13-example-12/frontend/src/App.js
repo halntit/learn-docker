@@ -5,9 +5,9 @@ import CourseGoals from './components/goals/CourseGoals';
 import ErrorAlert from './components/UI/ErrorAlert';
 
 const backendUrl =
-  process.env.NODE_ENV === 'development'
-    ? 'http://localhost'
-    : 'http://goals-node-lb-1482169531.ap-southeast-1.elb.amazonaws.com';
+    process.env.NODE_ENV === 'development'
+        ? 'http://localhost'
+        : 'http://goals-node-lb-1482169531.ap-southeast-1.elb.amazonaws.com/';
 
 function App() {
   const [loadedGoals, setLoadedGoals] = useState([]);
