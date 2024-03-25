@@ -5,3 +5,4 @@
 
 ### Container using Load balancer
 - Get IP address from subnet/listener
+- Fix LB issue
