@@ -11,6 +11,11 @@
   - Careful on Target group section in Load balancer when creating service
   - If failed in attaching LB to a service, should re-create it, updating does not work
 
+Notes
+
+- To build only a specific stage, use --target args
+  - `docker build --target build ...`
+
 ### Different between normal and alpine system
 
 * You can use the normal image, since it is based on the "buildpack-deps", which is *commonly used by a lot of images* .
