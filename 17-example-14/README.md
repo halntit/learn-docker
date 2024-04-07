@@ -1,0 +1,11 @@
+# First app on k8s
+- Build image
+  - ```docker build -t kub-first-app .```
+- Start minukube
+  - ```minikube start --driver=hyperv``` (hyperV not support on linux/amd64)
+- Create new deployment object
+  - ```kubectl create deployment first-app --image=```
+- Get insight
+  - ```kubectl get pods```
+- Delete deplotment
+  - ```kubectl delete deployment <name>```
