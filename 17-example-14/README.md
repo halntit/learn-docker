@@ -22,3 +22,29 @@
 
 ## Access dashboard
 - ```minikube dashboard```
+
+## Service object
+- Pod have an internal IP address by default (and changed when a Pod is replaced)
+- Sevice group Pods with a shared IP
+- Service can allow external access to Pods
+- Expose a deployment with a service
+  - ```kubectl expose deployment first-app --type=LoadBalancer --port=8080```
+  - ```kubectl get services```
+- Access pod from serivce
+  - ```minikube service first-app```
+
+## Scaling in action
+- ```kubectl scale deployment/first-app --replicas=3```
+
+## Updating deployments
+- Changes code, rebuild image
+  - docker build... / docker tag .../ docker push
+- Update new image for deployment
+  - ```kubectl set image deployment/first-app kube-first-app=halntit/kube-first-app```
+- **NOTE: the image won't updated without tag**
+  - rebuild image with tag: ```docker build -t kub-first-app:2 .```
+  - retag image with tag: ```docker tag kub-first-app:2 halntit/kube-first-app:2```
+  - repush with tag: ```docker push halntit/kube-first-app:2```
+  - set image with tag: ```kubectl set image deployment/first-app kube-first-app=halntit/kube-first-app:2```
+  - check the status of the rollout: ```kubectl rollout status deployment/first-app```
+  - 
