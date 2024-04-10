@@ -30,7 +30,7 @@
 - Expose a deployment with a service
   - ```kubectl expose deployment first-app --type=LoadBalancer --port=8080```
   - ```kubectl get services```
-- Access pod from serivce
+- Access pod from serivce (start webpage)
   - ```minikube service first-app```
 
 ## Scaling in action
