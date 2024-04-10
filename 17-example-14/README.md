@@ -47,4 +47,13 @@
   - repush with tag: ```docker push halntit/kube-first-app:2```
   - set image with tag: ```kubectl set image deployment/first-app kube-first-app=halntit/kube-first-app:2```
   - check the status of the rollout: ```kubectl rollout status deployment/first-app```
-  - 
+
+## Rollback and History
+- If you has typo in the ```set image``` command like ```kube-first-app=halntit/kube-first-app:**a2**``, the deployment will failed
+- In that case, the current pod will not terminated and won't replaced by the failed pod
+- Review history
+  - ```kubectl rollout history deployment/first-app``` or
+  - ```kubectl rollout history deployment/first-app --revision=1```
+- To roll back, use command
+  - ```kubectl rollout undo deployment/first-app``` or
+  - ```kubectl rollout undo deployment/first-app --to-revision=1```
