@@ -1,6 +1,6 @@
 # First app on k8s
 
-# Build image
+## Build image
   - ```docker build -t kub-first-app .```
 
 ## Push image to HUB
