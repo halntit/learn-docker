@@ -18,6 +18,16 @@
 - Command: ```kubectl apply -f service.yml```
 - ```minibuke service backend```
 
+## Update / Delete Resources
+
+- To update, fix configuration file then run ```kubectl apply ...``` again
+- To delete: ```kubectl delete -f=deployment.yaml```
+
+## Multiple vs single config files
+
+- separated must be **---** (three dashes)
+- best pratice **service** should go before **deployment**
+
 ### Notes
 
 - **spec > selector** of deployment object is newer so it has different instruction from service object (with matchLabels)
