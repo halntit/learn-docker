@@ -17,3 +17,5 @@ spec:
       containers:
         - name: second-node
           image: halntit/kube-first-app:2
+        # - name: third-node
+        #   image: halntit/kube-third-app:3

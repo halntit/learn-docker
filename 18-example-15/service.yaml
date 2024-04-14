@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: backend
 spec:
-  selector: 
+  selector:
     app: second-app
   ports:
     - protocol: 'TCP'
