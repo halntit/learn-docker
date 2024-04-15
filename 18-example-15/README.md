@@ -22,6 +22,8 @@
 
 - To update, fix configuration file then run ```kubectl apply ...``` again
 - To delete: ```kubectl delete -f=deployment.yaml```
+- To delete by selector (label):
+  - ```kubectl delete deplotments,services -l group=example```
 
 ## Multiple vs single config files
 
