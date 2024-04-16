@@ -33,3 +33,6 @@
 ### Notes
 
 - **spec > selector** of deployment object is newer so it has different instruction from service object (with matchLabels)
+- to let kubenetes always pull newest image
+  - containers > image: academind/kub-first-app:**lastest**
+  - containers > imagePullPolicy: Always
