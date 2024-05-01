@@ -15,6 +15,7 @@ spec:
       containers:
         - name: users
           image: halntit/kub-demo-users:latest
-          # ports:
-          #   - containerPort: 3000
+          imagePullPolicy: Always
+        - name: auth
+          image: halntit/kub-demo-auth:latest
           imagePullPolicy: Always
