@@ -16,6 +16,6 @@ spec:
         - name: users
           image: halntit/kub-demo-users:latest
           imagePullPolicy: Always
-        - name: auth
-          image: halntit/kub-demo-auth:latest
-          imagePullPolicy: Always
+          env:
+            - name: AUTH_ADDRESS
+              value: localhost
