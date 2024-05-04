@@ -15,7 +15,6 @@ spec:
       containers:
         - name: users
           image: halntit/kub-demo-users:latest
-          imagePullPolicy: Always
           env:
             - name: AUTH_ADDRESS
               # value: "10.97.185.146"

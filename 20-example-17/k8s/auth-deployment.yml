@@ -15,4 +15,3 @@ spec:
       containers:
         - name: auth
           image: halntit/kub-demo-auth:latest
-          imagePullPolicy: Always
