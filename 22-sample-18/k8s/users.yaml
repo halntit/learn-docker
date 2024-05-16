@@ -30,6 +30,6 @@ spec:
           image: halntit/kub-dep-users:latest
           env:
             - name: MONGODB_CONNECTION_URI
-              value: 'mongodb+srv://halnt:voWB9uMxJPQu1QwD@cluster0.c85a9pv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+              value: 'mongodb+srv://halnt:U7hIVp713hjGJmcH@cluster0.c85a9pv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
             - name: AUTH_API_ADDRESSS
               value: 'auth-service.default:3000'
