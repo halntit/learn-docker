@@ -11,4 +11,19 @@
   - Access IAM -> EC2 
     - -> search for eks -> check
     - -> search for cni -> check
-    - -> search for ec2containerreg -> ... READONLY -> check
+    - -> search for ec2containerreg -> ...sth...READONLY -> check
+
+## Stop minikube
+- minikube delete
+  - all config for minikube will be removed from /<user-home>/.kube/config
+
+## Issues
+- error: exec plugin: invalid apiVersion "client.authentication.k8s.io/v1alpha1"
+  - ```pip3 install awscli --upgrade --user```
+  - ```aws eks --region ap-southeast-1 update-kubeconfig --name kub-dep-demo```
+    - add config for aws into local kube
+
+## Deployment
+- apply as in minikibe
+- ```kubectl apply -f auth.yml -f users.yml```
+- ```kubectl get services```
