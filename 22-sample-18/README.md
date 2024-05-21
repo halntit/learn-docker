@@ -18,13 +18,13 @@
     - -> search for cni -> check
     - -> search for ec2containerreg -> ...sth...READONLY -> check
 
-## Stop minikube
-
 ## Issues
 - error: exec plugin: invalid apiVersion "client.authentication.k8s.io/v1alpha1"
   - ```pip3 install awscli --upgrade --user```
   - ```aws eks --region ap-southeast-1 update-kubeconfig --name kub-dep-demo```
     - add config for aws into local kube
+- error: driver name efs.csi.aws.com not found in the list of registered CSI drivers
+  - follow (*)
 
 ## Deployment
 - apply as in minikibe
@@ -33,4 +33,4 @@
 
 ## Apply AWS-EFS
 - From https://github.com/kubernetes-sigs/aws-efs-csi-driver
-  - ```kubectl apply -k "github.com/kubernetes-sigs/aws-efs-csi-driver/deploy/kubernetes/overlays/stable/?ref=release-2.0"```
+  - ```kubectl apply -k "github.com/kubernetes-sigs/aws-efs-csi-driver/deploy/kubernetes/overlays/stable/?ref=release-2.0"``` (*)
