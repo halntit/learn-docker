@@ -12,4 +12,11 @@ services:
       - '8080:3000'
     environment:
       MONGODB_CONNECTION_URI: 'mongodb+srv://halnt:U7hIVp713hjGJmcH@cluster0.c85a9pv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
-      AUTH_API_ADDRESSS: 'auth:3000'
+      AUTH_API_ADDRESS: 'auth:3000'
+  tasks:
+    build: ./tasks-api
+    ports:
+      - '3000:3000'
+    environment:
+      MONGODB_CONNECTION_URI: 'mongodb+srv://halnt:U7hIVp713hjGJmcH@cluster0.c85a9pv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+      AUTH_API_ADDRESS: 'auth:3000'
